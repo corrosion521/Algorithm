@@ -11,3 +11,7 @@ https://www.inflearn.com/course/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%95%8C%E
    2. 완전이진트리(complete binary tree) : 마지막 레벨을 제외하고 모든레벨이 꽉 채워져 있고, 마지막 레벨의 모든 노드는 가장 왼쪽으로 몰려있다.
    ![img.png](img.png)
 2. 동작 방식![img_1.png](img_1.png)
+
+- 시간복잡도 : N logN
+1. heap형태 정렬  ex) 8개의 데이터를 max heap으로 만들려면 3번의 작업이 필요,3개의 데이터는 1번
+2. 그 과정을 각각의 노드 개수만큼 -> N x logN
