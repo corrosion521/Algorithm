@@ -11,7 +11,7 @@ https://www.inflearn.com/course/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%95%8C%E
 
 
 '''
-![img_6.png](img_6.png)
+![img_8.png](img_8.png)
 ![img_3.png](img_3.png)
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png)
