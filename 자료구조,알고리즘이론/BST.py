@@ -50,7 +50,43 @@ def minimum(node):
         node = node.left
 
     # 가장 왼쪽에 있는 애를 리턴
-    return node.val
+    return node
+# 삭제하기 (remove,delete)
+def remove(root,val):
+    # 삭제하기 위해 삭제할 위치를 찾아줘야함.
+
+    # 삭제할 값이 root의 값보다 작을 경우
+    if val <root.val:
+        #왼쪽으로 이동
+        root.left = remove(root.left,val)
+    elif val > root.val:
+        # 오른쪽으로 이동
+        root.right = remove(root.right,val)
+    # 삭제할 애를 찾아서 작업을 시작해줍니다
+    else:#val==root.val
+        # 케이스를 여러가지로 나눠줘야 합니다
+        # 1,2 자식이 하나이거나 둘일 경우, 자식 없는 경우도 처리가 가능하다 (어차피 None이기에)
+        if root.left is None: # 왼쪽이 없다 == 오른쪽이 있거나 없다
+            temp_node = root.right
+            return temp_node
+        elif root.right is None:
+            temp_node = root.left
+            return temp_node
+
+        #자식 노드가 2개일 경우도
+        #노드 오른쪽편에서 가장 왼쪽 것(가장 작은 값)을 찾습니다.
+        temp_node = minimum(root.right)
+        # node의 값을 오른쪽편에서 가장 작을 애를 넣어주고
+        root.val = temp_node.val
+
+        # temp_node.val에 값을 삭제해줍니다.
+        # root의 오른쪽편에서 가장 왼쪽에 있는 값을 삭제해주면
+        # root에 temp_node.val의 값이 들어가고
+        # temp_node를 삭제해주면 BST형태가 갖춰집니다.
+        root.right = remove(root.right,temp_node.val)
+
+    return root
+
 
 root = None
 root = insert(root,50)
@@ -61,5 +97,7 @@ root = insert(root,70)
 root = insert(root,60)
 root = insert(root,80)
 
-inorder(root)#20 30 40 50 60 70 80
-print(minimum(root))
+root = remove(root,50)
+
+inorder(root)#20 30 40 60 70 80
+print("root",root.val)
