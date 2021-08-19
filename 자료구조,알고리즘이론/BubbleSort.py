@@ -29,7 +29,7 @@ def bubblesort(list):
     for i in range(len(list)-1):#3,마지막라운드는 자동
 
         for j in range(0,len(list)-1-i):#2
-            if list[j]>list[j+1]:
+            if list[j]>list[j+1]:#1
                 list[j],list[j+1] = list[j+1],list[j]
 
 list = [5,3,4,2,7]
