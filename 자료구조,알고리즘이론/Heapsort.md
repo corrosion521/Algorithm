@@ -8,8 +8,10 @@ https://www.inflearn.com/course/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%95%8C%E
 - 동작방식
 1. 사전 지식
    1. Heap : 최대값, 최소값을 찾아내기 위해 고안된 완전이진트리 형태의 자료구조
-   2. 완전이진트리(complete binary tree) : 마지막 레벨을 제외하고 모든레벨이 꽉 채워져 있고, 마지막 레벨의 모든 노드는 가장 왼쪽으로 몰려있다.
-   ![img.png](img.png)
+   2. 완전이진트리(complete binary tree) : 
+      1. 마지막 레벨을 제외하고 모든레벨이 꽉 채워져 있고
+      2. 마지막 레벨의 모든 노드는 가장 왼쪽으로 몰려있다.
+      ![img.png](img.png)
 2. 동작 방식![img_1.png](img_1.png)
 
 - 시간복잡도 : N logN
