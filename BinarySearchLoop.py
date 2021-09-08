@@ -1,4 +1,4 @@
-#함수: 이진 탐색 트리(반복문)
+#함수: 이진 탐색 (반복문)
 def BSL(arr,first,last,target):
     while True:
         mid = (first + last) // 2

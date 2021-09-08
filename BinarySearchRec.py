@@ -1,4 +1,4 @@
-#함수: 이진 탐색 트리(재귀)
+#함수: 이진 탐색 (재귀)
 def BSR(arr,first,last,target):
     mid = (first+last)//2
 
