@@ -1,3 +1,16 @@
+'''
+m = int(input())
+
+if m>=3 and m<=5:
+    print("spring")
+elif m>=6 and m<=8:
+    print("summer")
+elif m>=9 and m<=11:
+    print("fall")
+else:
+    print("winter")
+'''
+
 #입력 : 월(1~12)
 a = int(input())
 
@@ -10,6 +23,7 @@ elif a//3==3:
     print("fall")
 else :
     print("winter")
+
 
 
 
