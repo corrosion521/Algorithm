@@ -9,6 +9,9 @@ elif m>=9 and m<=11:
     print("fall")
 else:
     print("winter")
+
+수의 특징을 관찰하여
+간단히 부호로 표현할 수 있다.
 '''
 
 #입력 : 월(1~12)
