@@ -1,5 +1,5 @@
-#입력 : 두 정수
-a,b = map(int,input().split())
-
-#출력 : 조건)a<b->True, a>=b False,  조건문반환-bool 인것 이용
+'''
+비교연산자(>,= 등..)은 True,False를 반환함을 염두하자.
+'''
+a,b=map(int,input().split())
 print(a<b)
