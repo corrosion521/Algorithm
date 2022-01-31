@@ -1,9 +1,18 @@
-T = int(input()) # 테스트 케이스 수
-
-for i in range(T):
-    n=1
-    H, W, N = map(int, input().split())  # 호텔 층수, 각 층 방수, 몇 번째 손님?
+'''
+1. 반복문 쓰면 효율성이 좀 떨어진다.(시간 복잡도 생각)
     while N>H:
             N = N-H
             n+=1
-    print(N,"%02d"%n,sep="")
+2. 문제의 요구사항을 파악하고 예외를 유의하자.
+ex) %, //과 같은 연산을 이용하면 생기는 예외를 파악
+'''
+
+T = int(input()) # 테스트 케이스 수
+for i in range(T):
+    H, W, N = map(int, input().split())  # 호텔 층수, 각 층 방수, 몇 번째 손님?
+    a=N%H # 층
+    b=N//H+1 # 호수
+    if a==0: # 예외사항: 마지막 층 배치
+        print(H*100+b-1) #0층이아니라 그 전 호수의 최상층
+    else:
+        print(a*100+b)
