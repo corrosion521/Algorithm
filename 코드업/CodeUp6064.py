@@ -4,6 +4,9 @@
 이용하자.
 특히 괄호를 잘 이용해보자.
 '''
-a,b,c = map(int,input().split())
+# a,b,c = map(int,input().split())
+#
+# print(a if(a<=(b if(b<=c) else c)) else (b if(b<=c) else c))
+list = list(map(int,input().split()))
 
-print(a if(a<=(b if(b<=c) else c)) else (b if(b<=c) else c))
+print(min(list)) 
